@@ -1,0 +1,6 @@
+*.cf filter=lfs diff=lfs merge=lfs -text
+*.bmp filter=lfs diff=lfs merge=lfs -text
+*.dt filter=lfs diff=lfs merge=lfs -text
+*.epf filter=lfs diff=lfs merge=lfs -text
+*.erf filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
