@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОчиститьЗамер" id="34">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ОчиститьЗамер</CommandName>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<ExtendedTooltip name="ФормаОчиститьЗамерРасширеннаяПодсказка" id="35"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="КодНаименование" id="13">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КодНаименованиеРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыОсновная" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы основная</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыОсновнаяРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<Page name="ГруппаШапка" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<InputField name="ПолныйПуть" id="7">
+							<DataPath>Объект.ПолныйПуть</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ПолныйПутьКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПолныйПутьРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="StartChoice">ПолныйПутьНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="ЗагрузкаВРеальномВремени" id="10">
+							<DataPath>Объект.ЗагрузкаВРеальномВремени</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗагрузкаВРеальномВремениКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ЗагрузкаВРеальномВремениРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+						<UsualGroup name="РегламентноеЗадание" id="15">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="РегламентноеЗаданиеРасширеннаяПодсказка" id="16"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагружатьАвтоматически" id="17">
+									<DataPath>ЗагружатьАвтоматически</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗагружатьАвтоматическиКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ЗагружатьАвтоматическиРасширеннаяПодсказка" id="19"/>
+									<Events>
+										<Event name="OnChange">ЗагружатьАвтоматическиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelField name="СостояниеРЗ" id="20">
+									<DataPath>СостояниеРЗ</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="СостояниеРЗКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="СостояниеРЗРасширеннаяПодсказка" id="22"/>
+									<Events>
+										<Event name="Click">СостояниеРЗНажатие</Event>
+									</Events>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ГлубинаХранения" id="31">
+							<DataPath>Объект.ГлубинаХранения</DataPath>
+							<ContextMenu name="ГлубинаХраненияКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ГлубинаХраненияРасширеннаяПодсказка" id="33"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаФильтры" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фильтры</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаФильтрыРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДаты" id="52">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатыРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<InputField name="НачалоПериода" id="43">
+									<DataPath>Объект.НачалоПериода</DataPath>
+									<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="45"/>
+									<Events>
+										<Event name="OnChange">НачалоПериодаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="КонецПериода" id="46">
+									<DataPath>Объект.КонецПериода</DataPath>
+									<ContextMenu name="КонецПериодаКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="КонецПериодаРасширеннаяПодсказка" id="48"/>
+									<Events>
+										<Event name="OnChange">КонецПериодаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="ПериодОчистить" id="60">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПериодОчистить</CommandName>
+									<RepresentationInContextMenu>None</RepresentationInContextMenu>
+									<ExtendedTooltip name="ПериодОчиститьРасширеннаяПодсказка" id="61"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ФильтрТипПроцесса" id="54">
+							<DataPath>ФильтрТипПроцесса</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ФильтрТипПроцессаКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ФильтрТипПроцессаРасширеннаяПодсказка" id="56"/>
+							<Events>
+								<Event name="StartChoice">ФильтрТипПроцессаНачалоВыбора</Event>
+								<Event name="Clearing">ФильтрТипПроцессаОчистка</Event>
+							</Events>
+						</InputField>
+						<InputField name="ФильтрТипСобытия" id="57">
+							<DataPath>ФильтрТипСобытия</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ФильтрТипСобытияКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ФильтрТипСобытияРасширеннаяПодсказка" id="59"/>
+							<Events>
+								<Event name="StartChoice">ФильтрТипСобытияНачалоВыбора</Event>
+								<Event name="Clearing">ФильтрТипСобытияОчистка</Event>
+							</Events>
+						</InputField>
+						<InputField name="ФильтрДлительность" id="67">
+							<DataPath>Объект.ФильтрДлительность</DataPath>
+							<ContextMenu name="ФильтрДлительностьКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ФильтрДлительностьРасширеннаяПодсказка" id="69"/>
+							<Events>
+								<Event name="OnChange">ФильтрДлительностьПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаСвойстваСобытия" id="62">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Свойства события (регулярное выражение)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаСвойстваСобытияРасширеннаяПодсказка" id="63"/>
+							<ChildItems>
+								<CheckBoxField name="ФильтрСвойстваСобытияКроме" id="64">
+									<DataPath>Объект.ФильтрСвойстваСобытияКроме</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ФильтрСвойстваСобытияКромеКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ФильтрСвойстваСобытияКромеРасширеннаяПодсказка" id="66"/>
+								</CheckBoxField>
+								<InputField name="ФильтрСвойсваСобытия" id="49">
+									<DataPath>Объект.ФильтрСвойстваСобытия</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ФильтрСвойсваСобытияКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="ФильтрСвойсваСобытияРасширеннаяПодсказка" id="51"/>
+									<Events>
+										<Event name="OnChange">ФильтрСвойсваСобытияПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Замеры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЗагружатьАвтоматически" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать автоматически</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеРЗ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние РЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиРЗ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки РЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ФильтрТипСобытия" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип события</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ФильтрТипПроцесса" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип процесса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПериодОчистить" id="1">
+			<Picture>
+				<xr:Ref>StdPicture.Clear</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПериодОчистить</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОчиститьЗамер" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить замер</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОчиститьЗамер</Action>
+		</Command>
+	</Commands>
+</Form>

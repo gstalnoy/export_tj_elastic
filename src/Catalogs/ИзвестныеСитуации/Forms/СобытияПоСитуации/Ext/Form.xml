@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>События по ситуации</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>true</ReadOnly>
+			<DataPath>Список</DataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="3"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="2"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="8">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="СписокВладелец" id="14">
+					<DataPath>Список.Owner</DataPath>
+					<ContextMenu name="СписокВладелецКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокВладелецРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="СписокСсылка" id="17">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СписокСсылкаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СписокСсылкаРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="СписокТипСобытия" id="20">
+					<DataPath>Список.ТипСобытия</DataPath>
+					<ContextMenu name="СписокТипСобытияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокТипСобытияРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="СписокДатаСобытия" id="23">
+					<DataPath>Список.ДатаСобытия</DataPath>
+					<ContextMenu name="СписокДатаСобытияКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокДатаСобытияРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="СписокДатаСобытияМкс" id="26">
+					<DataPath>Список.ДатаСобытияМкс</DataPath>
+					<ContextMenu name="СписокДатаСобытияМксКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СписокДатаСобытияМксРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="СписокНаименование" id="29">
+					<DataPath>Список.Description</DataPath>
+					<ContextMenu name="СписокНаименованиеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СписокНаименованиеРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="СписокТипПроцесса" id="32">
+					<DataPath>Список.ТипПроцесса</DataPath>
+					<ContextMenu name="СписокТипПроцессаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СписокТипПроцессаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="СписокУровеньСобытия" id="35">
+					<DataPath>Список.УровеньСобытия</DataPath>
+					<ContextMenu name="СписокУровеньСобытияКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СписокУровеньСобытияРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="СписокВсеСвойства" id="38">
+					<DataPath>Список.ВсеСвойства</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СписокВсеСвойстваКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СписокВсеСвойстваРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="СписокДлительностьМкс" id="41">
+					<DataPath>Список.ДлительностьМкс</DataPath>
+					<ContextMenu name="СписокДлительностьМксКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="СписокДлительностьМксРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="СписокФайл" id="44">
+					<DataPath>Список.Файл</DataPath>
+					<ContextMenu name="СписокФайлКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СписокФайлРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="СписокНомерСтрокиФайла" id="47">
+					<DataPath>Список.НомерСтрокиФайла</DataPath>
+					<ContextMenu name="СписокНомерСтрокиФайлаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="СписокНомерСтрокиФайлаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СобытияЗамера.Ссылка,
+	СобытияЗамера.Владелец,
+	СобытияЗамера.Наименование,
+	СобытияЗамера.ТипПроцесса,
+	СобытияЗамера.Файл,
+	СобытияЗамера.НомерСтрокиФайла,
+	СобытияЗамера.ДатаСобытия,
+	СобытияЗамера.ДатаСобытияМкс,
+	СобытияЗамера.ДлительностьМкс,
+	СобытияЗамера.ТипСобытия,
+	СобытияЗамера.УровеньСобытия,
+	СобытияЗамера.ВсеСвойства
+ИЗ
+	Справочник.СобытияЗамера.КлючевыеСвойства КАК СобытияЗамераКлючевыеСвойства
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.СобытияЗамера КАК СобытияЗамера
+		ПО СобытияЗамераКлючевыеСвойства.Ссылка = СобытияЗамера.Ссылка
+ГДЕ
+	СобытияЗамераКлючевыеСвойства.Свойство = &amp;Свойство
+	И СобытияЗамераКлючевыеСвойства.ХешЗначения = &amp;ХешЗначения</QueryText>
+				<MainTable>Catalog.СобытияЗамера</MainTable>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

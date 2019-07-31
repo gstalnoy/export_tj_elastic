@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+	<DataProcessor uuid="86a5f4da-d38f-44a5-8732-cc249a46910c">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.НастройкаТехнологическогоЖурнала" category="Object">
+				<xr:TypeId>c73c0cbd-53fb-4d41-8258-63c4891408f2</xr:TypeId>
+				<xr:ValueId>10dd65a4-39b3-4a82-8cae-43a3ee468c4c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.НастройкаТехнологическогоЖурнала" category="Manager">
+				<xr:TypeId>6c5f357c-14ad-4329-a158-f0665b3e523b</xr:TypeId>
+				<xr:ValueId>cb699960-d9ba-44f1-87ff-7c41c70d27ae</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>НастройкаТехнологическогоЖурнала</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактор файла конфигурации технологического журнала</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Настройка технологического журнала</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.НастройкаТехнологическогоЖурнала.Form.ОсновнаяФорма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ОсновнаяФорма</Form>
+			<Form>РедакторУсловийСобытия</Form>
+			<Form>РедакторУсловийКолонки</Form>
+			<Form>РедакторУсловия</Form>
+			<Form>ВыборШаблона</Form>
+			<Form>СохранениеШаблона</Form>
+			<Template>СоставСвойствСобытий</Template>
+			<Template>События</Template>
+			<Template>Свойства</Template>
+			<Template>ЗначенияСвойств</Template>
+			<Template>Шаблон1</Template>
+			<Template>Шаблон2</Template>
+			<Template>Шаблон3</Template>
+			<Template>Шаблон4</Template>
+			<Template>Шаблон5</Template>
+			<Template>Шаблон6</Template>
+			<Template>Шаблон7</Template>
+			<Template>Шаблон8</Template>
+			<Template>Шаблон9</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

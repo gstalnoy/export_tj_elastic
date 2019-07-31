@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.8">
+	<Item id="22593321-e506-49f4-b753-c81811a5015f">
+		<Name>_1CV8</Name>
+		<Code/>
+		<Description>1cv8</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d4752cc2-2291-40ba-af8d-33e357608a5c">
+		<Name>_1CV8C</Name>
+		<Code/>
+		<Description>1cv8c</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7ea1c9f7-0955-4964-ba7d-e31beb07bd00">
+		<Name>_1CV8S</Name>
+		<Code/>
+		<Description>1cv8s</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9d4aaa43-0432-4423-8937-474913f2b795">
+		<Name>mmc</Name>
+		<Code/>
+		<Description>mmc</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c79943aa-0ac4-4d39-bd97-eab14dda1385">
+		<Name>ragent</Name>
+		<Code/>
+		<Description>ragent</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9b358c18-37af-4903-90f8-bb6f015ae594">
+		<Name>rmngr</Name>
+		<Code/>
+		<Description>rmngr</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7474ecdd-a446-4e86-b030-5feaaae6c5c0">
+		<Name>rphost</Name>
+		<Code/>
+		<Description>rphost</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

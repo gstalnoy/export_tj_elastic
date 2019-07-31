@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+	<DataProcessor uuid="a365f1b4-9eef-4fc4-9ac1-6d70ffb93aee">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.РегламентныеИФоновыеЗадания" category="Object">
+				<xr:TypeId>53ddbcf8-054f-4b01-a92f-cb484b21d691</xr:TypeId>
+				<xr:ValueId>3de25c8a-b8c1-4ffb-b0b3-615fc340f121</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.РегламентныеИФоновыеЗадания" category="Manager">
+				<xr:TypeId>e95a0f79-729e-43fb-b6f9-d6d0463799f2</xr:TypeId>
+				<xr:ValueId>00cbd7fd-1c82-4d84-a076-b7cc6d4e1551</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>РегламентныеИФоновыеЗадания</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регламентные и фоновые задания</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.РегламентныеИФоновыеЗадания.Form.РегламентныеИФоновыеЗадания</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>РегламентныеИФоновыеЗадания</Form>
+			<Form>ФоновоеЗадание</Form>
+			<Form>РегламентноеЗадание</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>
