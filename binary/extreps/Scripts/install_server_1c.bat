@@ -1,0 +1,1 @@
+﻿sc create "1C:Enterprise 8.3 Server Agent (test)" binpath= """"%PROGRAMFILES%\1cv8\8.3.12.1567\bin\ragent.exe""" -srvc -agent -regport 2541 -port 2540 -range 2560:2591 -d"""%PROGRAMFILES%\1cv8\srvinfo_test""" -debug" DisplayName= "Агент сервера 1С:Предприятия 8.3 (test)" start= auto
