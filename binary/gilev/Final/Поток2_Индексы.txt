@@ -1,0 +1,59 @@
+use [Имя_Базы_Данных];
+GO
+
+DECLARE @NumberPotok int
+DECLARE @NumberAllPotok int
+
+SET @NumberAllPotok = 2 -- количество потоков
+SET @NumberPotok = 1 -- номер потока
+
+DECLARE @dbTables TABLE
+(
+	ID INT  NOT NULL,
+	TABLE_NAME VARCHAR(max) NOT NULL,
+	INDEXNAME VARCHAR(max) NOT NULL,
+	avg_fragmentation_in_percent decimal  NOT NULL
+)
+
+INSERT INTO @dbTables
+SELECT ID,TABLE_NAME,INDEXNAME,avg_fragmentation_in_percent FROM [ForReglament].[dbo].[TableListForDefrag]
+
+DECLARE @tableCount int
+DECLARE @tableName VARCHAR(max)
+DECLARE @indexName VARCHAR(max)
+DECLARE @sql VARCHAR(max)
+DECLARE @TekHH int
+DECLARE @AvcFragment int
+
+SELECT @tableCount = COUNT(*) - @NumberPotok  FROM @dbTables
+
+
+WHILE (@tableCount>0)
+BEGIN
+
+SELECT @TekHH  = DATEPART(hour, GETDATE())
+
+SELECT TOP 1 @tableName = TABLE_NAME, @indexName = INDEXNAME, @AvcFragment = avg_fragmentation_in_percent from @dbTables WHERE ID = @tableCount
+	
+
+Insert into [ForReglament].[dbo].[HystoryForDefrag] (table_name,StartDate,indexname) VALUES (@tableName,GETDATE(), @indexName) ;
+
+      
+
+SET @sql = 'BEGIN TRY ALTER INDEX ['+@indexName+'] ON ['+ @tableName+']'+
+CASE
+WHEN @AvcFragment  > 30 THEN ' REBUILD WITH (ONLINE=OFF) END TRY BEGIN CATCH ALTER INDEX ['+@indexName+'] ON ['+ @tableName+ '] REBUILD WITH (ONLINE=OFF) END CATCH;'
+ELSE ' REORGANIZE END TRY BEGIN CATCH END CATCH;' end
+		
+		--PRINT @sql
+set @sql = REPLACE(@sql, '[dbo.','[dbo].[');
+		
+		EXEC(@sql)	
+
+    UPDATE [ForReglament].[dbo].[HystoryForDefrag]  SET EndDate = GETDATE() WHERE table_name = @tableName and indexname = @indexName;
+
+	DELETE FROM @dbTables
+	WHERE id=@tableCount
+	
+	SET @tableCount=@tableCount-@NumberAllPotok
+END

@@ -1,0 +1,8 @@
+﻿{
+    "default": {
+        "--ibconnection": "D:\1cv83.db\kanban\build\ibservice",
+        "--db-user": "s.rudakov",
+        "--db-pwd": "",
+        "--ordinaryapp": "0"
+    }
+}

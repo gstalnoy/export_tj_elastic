@@ -1,0 +1,1 @@
+exec sp_MSforeachtable N'UPDATE STATISTICS ? WITH FULLSCAN'

@@ -1,0 +1,1 @@
+﻿gitsync clone D:\Repo\Kanban http://linsrv01.apk-agroeco.ru/dev1c/kanban.git D:\repo_git\kanban -email agroeco.ru

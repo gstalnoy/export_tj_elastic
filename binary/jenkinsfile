@@ -1,0 +1,263 @@
+﻿#!groovy
+import groovy.json.JsonSlurper
+// ВНИМАНИЕ:
+// Jenkins и его ноды нужно запускать с кодировкой UTF-8
+//      строка конфигурации для запуска Jenkins
+//      <arguments>-Xrs -Xmx256m -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle -Dmail.smtp.starttls.enable=true -Dfile.encoding=UTF-8 -jar "%BASE%\jenkins.war" --httpPort=8080 --webroot="%BASE%\war" </arguments>
+//
+//      строка для запуска нод
+//      @"C:\Program Files (x86)\Jenkins\jre\bin\java.exe" -Dfile.encoding=UTF-8 -jar slave.jar -jnlpUrl http://localhost:8080/computer/slave/slave-agent.jnlp -secret XXX
+//      подставляйте свой путь к java, порту Jenkins и секретному ключу
+//
+// Если запускать Jenkins не в режиме UTF-8, тогда нужно поменять метод cmd в конце кода, применив комментарий к методу
+
+
+def sonarCommand
+def RUNNER_IBCONNECTION="${env.RUNNER_IBCONNECTION}"
+def RUNNER_DBUSER="${env.RUNNER_DBUSER}"
+def STORAGE_NAME="${env.STORAGE_NAME}"
+def firstInitFail = false
+
+//def picklestitle = "sup"
+
+pipeline {
+    agent {
+        label "newbdd"
+    }
+    // environment {
+    //     Storage = credentials('db_UserName')
+    // }
+    options {
+        buildDiscarder(logRotator(numToKeepStr:'10'))
+    }
+    
+    stages {
+        // stage('Уведомления о начале сборки') {
+        //     steps {
+        //         timestamps {
+        //             script {
+        //                 notifyBuild('Стартовала')
+        //             }
+        //         }
+        //     }
+        // }
+
+
+        stage("Подготовка тестового контура") {
+            steps {                      
+                timestamps {
+                    // создаем пустые каталоги
+                    dir ('build') {
+                       writeFile file:'dummy', text:''
+                    }
+                    dir ('build/out') {
+                       writeFile file:'dummy', text:''
+                    }
+                    
+                    //делаем бекап и восстановление эталонной базы
+		            //cmd("tools/SQLScripts/sqlcmd_backup_restore.bat")
+		            //обновляем базу из хранилища
+		            //cmd("runner loadrepo --storage-name ${env.STORAGE_NAME} --storage-user Autotest --settings tools/vrunner.json")
+		            //обновляем БД
+		            cmd("runner updatedb --settings tools/vrunner.json")
+		            cmd("runner run --command \"ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;\" --execute \$runnerRoot/epf/ЗакрытьПредприятие.epf --settings tools/vrunner.json")
+                    
+                    
+                    
+                    //cmd("runner vanessa --settings tools/vrunner.first.json")
+
+                    //cmd("deployka loadrepo $connectionString $connectionDepod -db-user ${env.Storage_Usr} -storage-user $dbStorageName")
+                    //cmd("deployka dbupdate $connectionString -db-user $dbUserName -allow-warnings")
+
+                    //cmd("vrunner init-dev --src ./src/cf $dbUserName")
+
+                    // cmd("runner compileext ./src/cfe Краудсорсинг $dbUserName")
+                    // cmd("runner updateext Краудсорсинг $dbUserName")
+                    //cmd("runner run --command 'ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;' --execute \$runnerRoot/epf/ЗакрытьПредприятие.epf $dbUserName")
+                }
+            }
+        }
+        
+        stage("Первоначальное заполнение тестовыми данными") {
+            steps {                      
+                timestamps {
+                    script {
+                        try {
+                            //cmd("runner vanessa --settings tools/vrunner.first.json $dbUserName")
+                            //cmd("runner vanessa --settings tools/vrunner.first.json")
+                        } catch (err) {
+                            firstInitFail = true
+                        }
+                    }
+                }
+            }
+        }
+
+        stage("Проверка поведения") {
+            steps {
+                script {
+                    if (!firstInitFail) {
+                        timestamps {
+                            //cmd("runner vanessa --settings tools/vrunner.json $dbUserName")
+                            cmd("runner vanessa --settings tools/vrunner.json")
+                        }
+                    }
+                }
+            }
+        }
+
+        // stage("Дымовое тестирование") {
+        //     steps {
+        //         timestamps{
+        //             // cmd("runner xunit --settings tools/vrunner.json $dbUserName")
+        //         }
+        //     }
+        // }
+// stage('jira') {
+//     steps {
+//         script {
+//             // Get the list of solved issues and loop over it
+//             jiraIssueSelector(issueSelector: [$class: 'DefaultIssueSelector'])
+//             .each {
+//                 // jiraComment is provided by Jira-plugin
+//                 id -> jiraComment(issueKey: id,
+//                     body: "This issue was mentioned in [${env.BUILD_NUMBER}|${currentBuild.absoluteUrl}]"
+//                 )
+//             }
+//         }
+//     }
+// }
+        
+
+    }   
+    post {
+        always {                
+
+              allure includeProperties: false, jdk: '', results: [[path: 'build/out/allure']]
+            
+            // для дымовых тестов
+            // junit allowEmptyResults: true, testResults: 'build/out/junit.xml'
+
+    //         cmd("pickles -f features -o build/out/pickles -l ru --df dhtml --sn \"${picklestitle}\"")
+
+            publishHTML target: [
+                allowMissing: false, 
+                alwaysLinkToLastBuild: true, 
+                keepAll: false, 
+                reportDir: 'build/out', 
+                // reportFiles: 'allure-report/index.html,pickles/Index.html', 
+                reportFiles: 'allure-report/index.html',                 
+                reportName: 'HTML Report', 
+                reportTitles: ''
+                ]
+
+    //         cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'build/out/cucumber'
+
+    //         livingDocs featuresDir: 'build/out/cucumber', toc: 'LEFT'
+                            
+
+    
+                            
+             
+             
+            script{
+                if (firstInitFail)
+                    currentBuild.result = 'FAILURE'
+            }
+
+            //script {
+              //   if (currentBuild.result=='FAILURE')
+                //    notifyBuild(currentBuild.result) 
+                // notifyBuild(currentBuild.result)
+                // // Get the list of solved issues and loop over it
+                // if (currentBuild.result=='FAILURE')
+                //     jiraIssueSelector(issueSelector: [$class: 'DefaultIssueSelector'])
+                //     .each {
+                //         // jiraComment is provided by Jira-plugin
+                //         id -> jiraComment(issueKey: id,
+                //                 body: "Jenkins: ОШИБКА!!! найдена при автоматической проверке по данной задаче (Проверка № [${env.BUILD_NUMBER}|${currentBuild.absoluteUrl}])"
+                //         )
+                        
+                //     }
+                // else
+                //     jiraIssueSelector(issueSelector: [$class: 'DefaultIssueSelector'])
+                //     .each {
+                //         // jiraComment is provided by Jira-plugin
+                //         id -> jiraComment(issueKey: id,
+                //                 body: "Jenkins: Проверка выполнена без ошибок (Проверка № [${env.BUILD_NUMBER}|${currentBuild.absoluteUrl}])"                            
+                //         )
+                        
+                //     }                
+            //}
+
+        }
+    }
+}
+
+def cmd(command) {
+    if (isUnix()) {
+        sh "${command}"
+    } else {
+         bat "chcp 65001\n${command}"
+    }
+}
+
+def getUserName(email) {
+    def response = 
+    httpRequest 'https://slack.com/api/users.lookupByEmail?token=xoxp-91011106341-92270826068-353040826676-96a6e0cfd66609b0dcf3a04e4158e2cd&email='+email
+    def json = new JsonSlurper().parseText(response.content)
+    if (json.ok)
+    {
+    return ("@"+json.user.name)
+    }
+    else return email
+}
+
+def notifyBuild(String buildStatus = 'Стартовала') {
+  // build status of null means successful
+  buildStatus =  buildStatus ?: 'Успешно завершена'
+  if (buildStatus=='FAILURE') buildStatus='Завершена с ошибками'
+  if (buildStatus=='SUCCESS') buildStatus='Успешно завершена'
+  
+ 
+  // Default values
+  def colorName = 'RED'
+  def colorCode = '#FF0000'
+  def committer=getUserName(getCommitterEmail())
+  // Send notifications
+  def subject = "${buildStatus} cборка '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"  
+  def commitMessage=getCommiteMessage()	
+  def summary= "${subject} (${env.BUILD_URL}) \n ${commitMessage} , Автор:"+committer
+  
+  if (buildStatus != 'Стартовала')
+    summary=summary+"\n Отчет: http://185.96.87.18/job/pipeline_unitile_erp/allure/"
+  //def summary = "${subject} (${env.BUILD_URL}) \n ${commitMessage} ${committer}"
+  //def details = """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+  //  <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>"""
+ 
+  // Override default values based on build status
+  if (buildStatus == 'Стартовала' ) {
+    color = 'YELLOW'
+    colorCode = '#FFFF00'
+  } else if (buildStatus == 'Успешно завершена' ) {
+    color = 'GREEN'
+    colorCode = '#00FF00'
+  } else {
+    buildStatus = 'Завершена с ошибками'
+    color = 'RED'
+    colorCode = '#FF0000'
+  }
+ 
+  
+  slackSend (channel: '989_build_log',color: colorCode, message: summary)
+   
+}
+
+def getCommitterEmail() {
+    return  sh ( script: 'git --no-pager show -s --format=\'%ae\'', returnStdout: true).trim()
+}
+
+
+def getCommiteMessage() {
+ 	return  sh ( script: 'git log -1 --pretty=%B', returnStdout: true).trim()
+}

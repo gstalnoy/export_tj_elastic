@@ -1,0 +1,6 @@
+﻿1) инициализация пустого репозитория
+gitsync clone D:\Repo\Kanban http://linsrv01.apk-agroeco.ru/dev1c/kanban_test.git D:\repo_git\kanban_test -email agroeco.ru
+
+2)
+	cd D:\repo_git\kanban_test
+	gitsync D:\Repo\Kanban http://linsrv01.apk-agroeco.ru/dev1c/kanban_test.git .\src\cf

@@ -1,0 +1,1 @@
+exec msdb.dbo.RestoreDB 'D:\Development\Backup\ERP\ERP_2018-06-05 13_48_59.240.bak', '_C1_ERP_INTECO', 'C1_ERP_0', 'C1_ERP_0_log'

@@ -1,0 +1,36 @@
+pipeline {
+    agent {
+        label 'gitsync'
+    }
+    
+    triggers {
+        cron('H/5 * * * *')
+    }
+    
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
+    
+    stages {
+        stage('Hello world') {
+            steps {
+                timestamps {
+                    echo 'Привет мир!'
+                }
+            }
+        }
+        
+    }
+        
+    
+}
+
+
+
+vrunner syntax-check
+
+
+vrunner syntax-check --groupbymetadata --junitpath SyntaxCheck.xml --exception-file \"${EXCEPTION_FILE}\"" + 
+        " --mode -ThinClient -WebClient -Server -ExternalConnection -ExternalConnectionServer -MobileClient" + 
+        " -ThickClientManagedApplication -ThickClientServerManagedApplication -DistributiveModules"
+

@@ -1,0 +1,6 @@
+﻿1) инициализация пустого репозитория
+gitsync clone \\dev0\Repo\repository\SV http://linsrv01.apk-agroeco.ru/dev1c/sv.git D:\repo_git\sv -email agroeco.ru
+
+2)
+	cd D:\repo_git\sv
+	gitsync \\dev0\Repo\repository\SV http://linsrv01.apk-agroeco.ru/dev1c/sv.git .\src\cf

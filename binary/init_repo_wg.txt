@@ -1,0 +1,6 @@
+﻿1) инициализация пустого репозитория
+gitsync clone \\dev0\Repo\repository\wg http://linsrv01.apk-agroeco.ru/dev1c/wg.git D:\repo_git\wg -email agroeco.ru
+
+2)
+	cd D:\repo_git\wg
+	gitsync \\dev0\Repo\repository\wg http://linsrv01.apk-agroeco.ru/dev1c/wg.git .\src\cf

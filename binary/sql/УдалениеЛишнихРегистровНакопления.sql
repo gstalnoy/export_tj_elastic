@@ -1,0 +1,28 @@
+use _C1_ERP_ORG_GK;
+-- Очистка регистров накопления
+truncate table _AccumRg53886;
+truncate table _AccumRg53860;
+truncate table _AccumRg76906;
+truncate table _AccumRg53763;
+truncate table _AccumRg53625;
+truncate table _AccumRg52621;
+truncate table _AccumRg64512;
+truncate table _AccumRg58883;
+truncate table _AccumRg59557;
+truncate table _AccumRg58903;
+truncate table _AccumRg58847;
+truncate table _AccumRg57527;
+truncate table _AccumRg58842;
+truncate table _AccumRg58860;
+truncate table _AccumRg58838;
+truncate table _AccumRg57521;
+truncate table _AccumRg51692;
+truncate table _AccumRg51644;
+truncate table _AccumRg51633;
+truncate table _AccumRg51576;
+truncate table _AccumRg51563;
+truncate table _AccumRg50864;
+truncate table _AccumRg50851;
+truncate table _AccumRg50778;
+truncate table _AccumRg83502;
+truncate table _AccumRg49377;

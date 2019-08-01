@@ -1,0 +1,30 @@
+﻿
+:setvar servername erp0
+:setvar db_username db_backup
+:setvar db_pass 159357456
+:connect $(servername) -U $(db_username) -P $(db_pass)
+
+USE C1_ERP_0;
+
+DECLARE @pathname NVARCHAR(512);
+SET @pathname = 'ERP0_TO_DEV' + '.bak';
+
+DECLARE @phys_name NVARCHAR(512);
+SET @phys_name ='\\dev0\Repl\' + @pathname;
+
+PRINT 'Начало создания архива ERP ' + @phys_name;
+
+EXEC sp_addumpdevice 'disk', 'networkdevice', @phys_name;
+
+BACKUP DATABASE [C1_ERP_0] TO  
+	networkdevice
+	WITH COPY_ONLY, 
+	NOINIT,  
+	NAME = N' C1_ERP_0-Full Database Backup', 
+	SKIP, 
+	NOREWIND, 
+	NOUNLOAD, 
+	COMPRESSION, 
+	STATS = 10;
+
+EXEC sp_dropdevice 'networkdevice';

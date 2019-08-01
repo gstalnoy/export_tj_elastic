@@ -1,0 +1,4 @@
+﻿gitsync clone V:\repository\ERP http://linsrv01.apk-agroeco.ru/dev1c/erp.git D:\repo_git\erp -email agroeco.ru
+
+	cd D:\repo_git\erp
+	gitsync V:\repository\ERP http://linsrv01.apk-agroeco.ru/dev1c/erp.git .\src\cf  -minversion 0 -maxversion 3 -verbose ON  
