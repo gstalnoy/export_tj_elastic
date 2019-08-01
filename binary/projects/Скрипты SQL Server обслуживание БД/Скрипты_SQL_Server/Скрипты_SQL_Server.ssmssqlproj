@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Скрипты_SQL_Server">
+  <Items>
+    <LogicalFolder Name="Соединения" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="dev0.apk-agroeco.ru:sa">
+          <Created>2019-07-29T16:04:43.9124703+03:00</Created>
+          <Type>SQL</Type>
+          <Server>dev0.apk-agroeco.ru</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Среда Microsoft SQL Server Management Studio - запрос</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="erp0:db_backup">
+          <Created>2019-07-30T20:30:09.3921757+03:00</Created>
+          <Type>SQL</Type>
+          <Server>erp0</Server>
+          <UserName>db_backup</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Запросы" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Аппаратная конфигурация сервера.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Аппаратная конфигурация сервера.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Версия SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Версия SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Время жизни страниц (PLE).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Время жизни страниц (PLE).sql</FullPath>
+        </FileNode>
+        <FileNode Name="Время отклика дисков SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Время отклика дисков SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Время отклика чтение_запись по файлам баз SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Время отклика чтение_запись по файлам баз SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Все подключения к серверу.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Все подключения к серверу.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Глобальные флаги трассировки.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Глобальные флаги трассировки.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Дампы SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Дампы SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Диагностическая информация о SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Диагностическая информация о SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Диагностическая информация по всем базам сервера.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Диагностическая информация по всем базам сервера.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Длительные запросы больше 15 секунд.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Длительные запросы больше 15 секунд.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Загрузка ЦПУ за последние 256 минут.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Загрузка ЦПУ за последние 256 минут.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Запросы раздувающие кэш планов.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Запросы раздувающие кэш планов.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация о кластере.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация о кластере.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по NUMA.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по NUMA.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по VLF файлах в файле лога.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по VLF файлах в файле лога.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по архивам баз.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по архивам баз.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по вводу_выводу по конкретной базе.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по вводу_выводу по конкретной базе.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по всем базам сервера SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по всем базам сервера SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по всем обработчикам (workers).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по всем обработчикам (workers).sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по дискам сервера.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по дискам сервера.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по клеркам.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по клеркам.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по конкретной базе.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по конкретной базе.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по ожиданию предоставлению памяти.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по ожиданию предоставлению памяти.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по ожиданиям на сервере.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по ожиданиям на сервере.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по ОЗУ.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по ОЗУ.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по оповещениям SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по оповещениям SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по ОС.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по ОС.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по работе агента SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по работе агента SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по службам SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по службам SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по статистике в базе.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по статистике в базе.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Информация по фрагментации индексов в текущей базе.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Информация по фрагментации индексов в текущей базе.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Использование буфера по базам.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Использование буфера по базам.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Использование текущей базой Log файла.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Использование текущей базой Log файла.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Количество файлов в tempdb.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Количество файлов в tempdb.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Конфигурация конкретной базы.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Конфигурация конкретной базы.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Нагрузка на CPU по базам.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Нагрузка на CPU по базам.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Нагрузка по вводу_выводу по базам.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Нагрузка по вводу_выводу по базам.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Определение блокировок.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Определение блокировок.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Отсутствующие индексы в конкретной базе.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Отсутствующие индексы в конкретной базе.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Отсутствующие индексы.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Отсутствующие индексы.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Проверка версии SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Проверка версии SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Проверка мгновенной инициализации файлов SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Проверка мгновенной инициализации файлов SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Распределение адресного пространства.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Распределение адресного пространства.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Распределение буферов в конкретной базе.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Распределение буферов в конкретной базе.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Расширение буферного пула.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Расширение буферного пула.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Свойства сервера SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Свойства сервера SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Свойства экземпляра SQL сервер.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Свойства экземпляра SQL сервер.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Среднее количество задач.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Среднее количество задач.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Таблица подозрительных страниц.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Таблица подозрительных страниц.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Топ 25 пользовательских процедур.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Топ 25 пользовательских процедур.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Топ 50 длительных запросов.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Топ 50 длительных запросов.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Топ запросов по логическому чтению.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Топ запросов по логическому чтению.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Частота выполнения запросов в конкретной базе.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Частота выполнения запросов в конкретной базе.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Частота модификации статистики_индексов.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Частота модификации статистики_индексов.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Чтение_Запись индексов по текущей базе.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dev0.apk-agroeco.ru:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dev0.apk-agroeco.ru</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Чтение_Запись индексов по текущей базе.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Разное" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
